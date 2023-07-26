@@ -13,11 +13,12 @@ TOPDIR ?= $(CURDIR)
 include $(DEVKITPRO)/libnx/switch_rules
 
 # Versioning
-export GITREV := $(shell git rev-parse HEAD 2>/dev/null | cut -c1-7)
+# export GITREV := $(shell git rev-parse HEAD 2>/dev/null | cut -c1-7)
 export VERSION_MAJOR := 2
 export VERSION_MINOR := 0
-export VERSION_MICRO := 0
-export VERSION := $(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_MICRO)-$(GITREV)
+export VERSION_MICRO := 1
+export VERSION := $(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_MICRO)
+# -$(GITREV)
 
 #---------------------------------------------------------------------------------
 # TARGET is the name of the output

@@ -13,11 +13,10 @@ TOPDIR ?= $(CURDIR)
 include $(DEVKITPRO)/libnx/switch_rules
 
 # Versioning
-export GITREV := $(shell git rev-parse HEAD 2>/dev/null | cut -c1-7)
 export VERSION_MAJOR := 2
 export VERSION_MINOR := 0
-export VERSION_MICRO := 0
-export VERSION := $(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_MICRO)-$(GITREV)
+export VERSION_MICRO := 3
+export VERSION := $(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_MICRO)
 
 #---------------------------------------------------------------------------------
 # TARGET is the name of the output
@@ -49,7 +48,7 @@ export VERSION := $(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_MICRO)-$(GITREV)
 #---------------------------------------------------------------------------------
 APP_TITLE	 =	NXGallery
 APP_AUTHOR	 =	Jonathan Verbeek
-APP_VERSION	 =	$(VERSION)
+APP_VERSION	 =	2.0.3
 APP_TITLEID	 =	4200000000000909
 
 TARGET		:=	$(notdir $(CURDIR))
